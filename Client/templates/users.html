@@ -1,0 +1,31 @@
+{%extends "base.html" %}
+
+{%block title%} Flask connect API {%endblock%}
+
+{%block titleH1%}User(s):{%endblock%}
+{%block body%}   
+                     
+        <div class="users">
+                <div class="list-group">
+                        {% for user in users %}
+
+                        <a href ="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">{{user[1]}}</h5>
+                                        <small>{{user[0]}}</small>
+                                </div>
+                                <p class="mb-1">{{user[2]}}</p>
+                                <small>Know more...</small>
+                                
+
+                        </a>
+                        <a href="#" class="delete"> delete {{user[1]}}</a>        
+                        {% endfor %} 
+                </div>
+
+                <p> To access to one user profil : httpd://[...]/users/#id (replace #id by the user'id) </p>
+                <p> To delete one user profil : httpd://[...]/users/delete/#id (replace #id by the user'id)</p>
+        </div>
+         
+{%endblock%}
+

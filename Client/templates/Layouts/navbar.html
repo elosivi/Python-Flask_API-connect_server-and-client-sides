@@ -1,0 +1,32 @@
+
+{%block nav%}
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">CLIENT-SIDE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href ={{ url_for('index', filename='index.html') }}>Index </a><br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href ={{ url_for('login', filename='login.html') }}> Login </a> <br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href ={{ url_for('register', filename='register.html') }}> Register </a><br>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href ={{ url_for('logout', filename='logout.html') }}> Logout </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href ={{ url_for('users', filename='articles.html') }}> Users </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href ={{ url_for('articles', filename='logout.html') }}> Articles </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{%endblock%}

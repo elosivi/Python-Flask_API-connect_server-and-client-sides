@@ -1,0 +1,38 @@
+
+{%extends "base.html" %}
+
+{%block title%} Register {%endblock%}
+{%block titleH1%}Register{%endblock%}
+{%block body%}
+	<div class="container littleContainer register">
+        <div class="little-top-margin">
+            <div>
+                <form method="POST">
+                    <div class="form-group">
+                    
+                      <input type="text" name="username" class="form-control" id="username" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                     
+                      <input type="email" name="email" class="form-control" id="email" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                     
+                      <input type="password" name="password" class="form-control" id="password" placeholder="choose a password">
+                    </div>
+                    <div class="form-group">
+                     
+                      <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm the password">
+                    </div>
+                    <input type="submit" class="">
+                </form>
+            </div>
+        </div>
+        <div class="text_center yet_registered">
+          <a href ={{ url_for('login', filename='login.html') }} > Yet registered ? Login ! </a><br>
+        </div>
+
+    </div>
+
+<hr>
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends "base.html" %}
+
+{%block title%} Flask connect API {%endblock%}
+
+{%block titleH1%}User:{%endblock%}
+{%block body%}       
+                    
+{% if user != None %}                     
+<div class="card mb-3 shadow-lg userCard">
+    <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="../static/artist.jpg" class="card-img" alt="photo de profil">
+            </div>
+            <div class="col-md-7 rightSide">
+                <div class="card-body userCardBody ">
+                    <h2 class="card-title">{{user[1]}}</h2>
+                    <p class="card-text"><small class="text-muted">id#{{user[0]}}</small></p>
+                    <p class="card-text">{{user[2]}}</p>
+                    <h3>Présentation: </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis urna nisi, sit amet facilisis eros ullamcorper non. Maecenas vitae neque varius arcu consectetur eleifend. Aenean nisi neque, tincidunt ac aliquet vel, auctor finibus metus. Quisque aliquet leo felis, ut varius turpis facilisis at. Quisque enim sapien, sodales in justo vel, hendrerit fermentum arcu. Donec sollicitudin consectetur nisi a lobortis. Cras iaculis massa porta tincidunt faucibus. Curabitur nec vestibulum nibh, nec rutrum tortor. Fusce imperdiet ipsum et sem lacinia, et ornare ante pulvinar. Suspendisse lacinia, mi at bibendum venenatis, arcu lacus semper turpis, in finibus mauris velit vitae velit. Pellentesque non commodo enim, eu sollicitudin ante. Maecenas vehicula ipsum vel tortor pulvinar venenatis. Aliquam porttitor odio non sapien tempor, et lacinia ligula semper. 
+                        Sed in sagittis odio. Fusce venenatis maximus ante non blandit.</p>
+                
+                </div>
+            </div>
+    </div>
+</div>
+            
+{%else%}
+    <h2>No User</h2>
+{%endif%}    
+        
+        </div>
+         
+{%endblock%}
+

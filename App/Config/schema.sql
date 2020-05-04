@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS users (id integer primary key, username TEXT UNIQUE NOT NULL, email TEXT UNIQUE NOT NULL, password TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS articles (id integer primary key, title TEXT NOT NULL, body TEXT NOT NULL, creationDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,userId INT);

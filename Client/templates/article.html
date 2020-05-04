@@ -1,0 +1,39 @@
+{%extends "base.html" %}
+
+{%block title%} Flask connect API {%endblock%}
+
+
+{%block titleH1%}Article(s):{%endblock%}
+{%block body%}                
+
+                <hr>
+                <div class="container">
+                        <div class="row">
+                                
+                                        <div class="card col-5 article shadow-lg">
+                                                <div class="image"></div>
+                                                <div class="card-body">
+                                                        <h5 class="card-title">{{article[1]}}</h5>
+                                                        <p class="writedBy">Writed by: {{article[4]}}</p>
+                                                        <p class="card-text">{{article[2]}}</p>
+                                                        <small>{{article[3]}}</small><hr>
+                                                        <a href="#" class="btn btn-dark">Read more...</a>
+                                                </div>
+                                        </div>
+                               
+                        </div>
+                </div>
+
+                
+
+
+
+        <p> To access to one user profil : httpd://[...]/users/#id (replace #id by the user'id) </p>
+        <p> To delete one user profil : httpd://[...]/users/delete/#id (replace #id by the user'id)</p>
+        <a href ={{ url_for('users', filename='users.html') }}> Get all users </a><br>
+         {# <a href ={{ url_for('.users/'+users[1][0], filename='users.html') }}> Get on user {{users[1][1]</a><br>  #}
+        
+
+
+{%endblock%}
+

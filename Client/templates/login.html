@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+
+
+
+    {%block title%} Login {%endblock %}
+
+    {%block titleH1%}Login{%endblock%}
+    <hr>
+    {%block body%}
+
+    <div class="littleContainer login">
+
+        <form action="#" method="post">
+           
+            <p><input type="text" name="username" class="my-input" placeholder="Your name"/></p>
+
+           
+            <p><input type="password" name="password" class="my-input" placeholder="Your password"/></p>
+
+            <p><input type="submit" vamue="submit" /></p>
+
+        </form>  
+        <div class="text_center not_registered">
+            <a href ={{ url_for('register', filename='register.html') }} > Not registered ? </a><br>
+        </div>
+    </div>
+
+    {%endblock%}
